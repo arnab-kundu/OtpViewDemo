@@ -47,6 +47,10 @@ dependencies {
     //
     // module dependency
     //
-    //implementation project(path: ':otpview')
-    implementation 'com.github.arnab-kundu:OtpViewDemo:70922835b4'
+    implementation project(path: ':otpview')
+
+    //
+    // artifacts dependency
+    //
+    //implementation 'com.github.arnab-kundu:OtpViewDemo:1.0.0'
 }
