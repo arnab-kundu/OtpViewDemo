@@ -46,4 +46,5 @@ dependencies {
     // module dependency
     //
     implementation project(path: ':otpview')
+    //implementation 'com.github.arnab-kundu:OtpViewDemo:-SNAPSHOT'
 }
