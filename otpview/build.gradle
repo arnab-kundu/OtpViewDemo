@@ -3,6 +3,9 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+apply from: '../lib-version.gradle'
+
+
 android {
     namespace 'com.arnab.otpview'
     compileSdk 33
@@ -10,9 +13,14 @@ android {
     defaultConfig {
         minSdk 24
         targetSdk 33
+        versionCode project.ext.version.major * 100 + project.ext.version.minor * 10 + project.ext.version.build
+        versionName "${project.ext.version.major}.${project.ext.version.minor}.${project.ext.version.build}"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
+
+        /** Customized filename for generated aar file */
+        setProperty("archivesBaseName", "otpview-v" + versionName)
     }
 
     buildTypes {
