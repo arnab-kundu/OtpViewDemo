@@ -44,7 +44,7 @@ publishing {
         mavenJava(MavenPublication) {
             groupId = 'org.gradle.sample'
             artifactId = 'library'
-            version = '1.0.0'
+            version = "${project.ext.version.major}.${project.ext.version.minor}.${project.ext.version.build}"
             // from components.java
         }
     }
