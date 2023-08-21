@@ -6,13 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <com.arnab.otpview.OtpTextView
+        android:id="@+id/pincodeTextFieldView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:textColor="@color/black"
+        app:bar_active_color="@color/purple_200"
+        app:bar_enabled="true"
+        app:bar_height="2dp"
+        app:bar_inactive_color="@android:color/transparent"
+        app:bar_margin_bottom="5dp"
+        app:bar_margin_left="5dp"
+        app:bar_margin_right="5dp"
+        app:box_margin="@dimen/registerPinCodeBoxMargin"
+        app:height="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:length="6"
+        app:otp=""
+        app:otp_box_background="@drawable/white_border_background"
+        app:otp_text_size="24dp"
+        app:width="@dimen/registerPinCodeBoxWidth"
+        tools:ignore="MissingClass" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
