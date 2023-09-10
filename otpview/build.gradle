@@ -21,7 +21,7 @@ android {
         consumerProguardFiles "consumer-rules.pro"
 
         /** Customized filename for generated aar file */
-        //setProperty("archivesBaseName", "otpview-v" + versionName)
+        setProperty("archivesBaseName", "otpview-v" + versionName)
     }
 
     buildTypes {
@@ -42,7 +42,7 @@ android {
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            groupId = 'org.gradle.sample'
+            groupId = 'com.github.arnab-kundu'
             artifactId = 'library'
             version = "${project.ext.version.major}.${project.ext.version.minor}.${project.ext.version.build}"
             // from components.java
