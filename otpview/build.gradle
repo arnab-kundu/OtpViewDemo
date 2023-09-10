@@ -39,16 +39,17 @@ android {
     }
 }
 
-/*publishing {
+publishing {
     publications {
         mavenJava(MavenPublication) {
             groupId = 'org.gradle.sample'
             artifactId = 'library'
             version = "${project.ext.version.major}.${project.ext.version.minor}.${project.ext.version.build}"
-            // from components.java
+            artifact("$buildDir/outputs/aar/module-debug.aar")
+            artifact(sourceJar)
         }
     }
-}*/
+}
 
 dependencies {
 
