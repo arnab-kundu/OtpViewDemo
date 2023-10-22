@@ -45,8 +45,10 @@ publishing {
             groupId = 'org.gradle.sample'
             artifactId = 'library'
             version = "${project.ext.version.major}.${project.ext.version.minor}.${project.ext.version.build}"
-            artifact("$buildDir/outputs/aar/module-debug.aar")
+            artifact("$buildDir/outputs/aar/otpview-debug.aar")
+            // /Users/arnabkundu/AndroidStudioProjects/OtpViewDemo/otpview/build/outputs/aar/otpview-debug.aar
             //artifact(sourceJar)
+            //from components.java
         }
     }
 }
