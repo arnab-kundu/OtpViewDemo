@@ -47,7 +47,7 @@ dependencies {
     //
     // module dependency
     //
-    implementation project(path: ':otpview')
+    implementation project(path: ':otpviewLibrary')
 
     //
     // artifacts dependency
