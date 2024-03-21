@@ -9,14 +9,15 @@ apply from: '../lib-version.gradle'
 def libraryVersionName = "${project.ext.version.major}.${project.ext.version.minor}.${project.ext.version.build}"
 
 android {
+    compileSdk 34
     namespace 'com.arnab.otpview'
-    compileSdk 33
+    buildFeatures{
+        buildConfig true
+    }
 
     defaultConfig {
         minSdk 24
-        targetSdk 33
-        versionCode project.ext.version.major * 100 + project.ext.version.minor * 10 + project.ext.version.build
-        versionName "${project.ext.version.major}.${project.ext.version.minor}.${project.ext.version.build}"
+        targetSdk 34
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
